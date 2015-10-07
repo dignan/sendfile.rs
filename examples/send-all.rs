@@ -5,6 +5,7 @@ extern crate sendfile;
 
 use core::str::FromStr;
 
+use sendfile::platform::sendfile_all;
 
 fn main() {
     let args: Vec<_> = std::env::args().collect();
@@ -21,6 +22,6 @@ fn main() {
     let infile = std::fs::File::open(src_path).unwrap();
     let stream = std::net::TcpStream::connect(dest_addr).unwrap();
 
-    let bytes_written = sendfile::sendfile_all(&infile, &stream, 4096).unwrap();
+    let bytes_written = sendfile::platform::sendfile_all(&infile, &stream, 4096).unwrap();
     println!("Ok -- {} byte(s) written", bytes_written);
 }
