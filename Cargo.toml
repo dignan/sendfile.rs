@@ -7,7 +7,4 @@ repository = "https://github.com/xen0n/sendfile.rs"
 readme = "README.md"
 keywords = ["sendfile", "wrapper", "linux"]
 license = "Apache-2.0/MIT"
-authors = ["Wang Xuerui <idontknw.wang@gmail.com>"]
-
-[dependencies]
-syscall = "0.2.0"
+authors = ["Wang Xuerui <idontknw.wang@gmail.com>", "Patrick Dignan <dignan.patrick@gmail.com"]
